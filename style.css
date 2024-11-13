@@ -4,7 +4,6 @@ body {
     background-color: #d6f9fa;
     margin: 0;
     padding: 0;
-    size: 50%;
 }
 
 header {
@@ -91,9 +90,11 @@ footer {
 }
 
 .cover-image {
-    width: 100%; /* Se ajusta a la pantalla */
+    width: auto; /* Se ajusta a la pantalla */
     height: auto; /* Mantiene la proporción */
-    border-radius: 10px; /* Opcional: agrega esquinas redondeadas */
+    border-radius: 30px; /* Opcional: agrega esquinas redondeadas */
+    display: block;
+    margin: auto;
 }
 
 /* Estilos para las tarjetas de productos */
