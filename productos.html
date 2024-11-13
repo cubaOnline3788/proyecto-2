@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - DJC ONLINE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1><strong>DJC ONLINE</strong></h1>
+        <p>Tienda de Productos Desechables</p>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">DJC ONLINE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#subscribe">Suscribirse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center">Nuestros Productos</h2>
+        <div class="row">
+            <?php
+            // Conexión a la base de datos
+            $servername = "localhost";
+            $username = "tu_usuario";
+            $password = "tu_contraseña";
+            $dbname = "tu_base_de_datos";
+
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if ($conn->connect_error) {
+                die("Conexión fallida: " . $conn->connect_error);
+            }
+
+            // Consulta SQL para obtener todos los productos
+            $sql = "SELECT * FROM productos";
+            $result = $conn->query($sql);
+
+            // Verifica si hay productos
+            if ($result->num_rows > 0) {
+                // Muestra los productos
+                while($row = $result->fetch_assoc()) {
+                    echo "<div class='col-md-4 mb-4'>";
+                    echo "<div class='card'>";
+                    echo "<img src='" . $row["imagen"] . "' alt='" . $row["nombre"] . "' class='card-img-top'>";
+                    echo "<div class='card-body'>";
+                    echo "<h5 class='card-title'>" . $row["nombre"] . "</h5>";
+                    echo "<p class='card-text'>" . $row["descripcion"] . "</p>";
+                    echo "<a href='#' class='btn btn-primary'>Ver más</a>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+                }
+            } else {
+                echo "No hay productos disponibles.";
+            }
+
+            // Cierra la conexión
+            $conn->close();
+            ?>
+        </div>
+    </div>
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2023 DJC ONLINE. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
