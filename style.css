@@ -25,6 +25,15 @@ header {
     margin: 20px auto;
     max-width: 600px;
 }
+.btn-secundary {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px, 0;
+}
 
 .product img {
     max-width: 40%;
