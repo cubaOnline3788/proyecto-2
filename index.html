@@ -6,79 +6,173 @@
     <title>DJC ONLINE - Tienda de Productos Desechables</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Imagen de portada -->
-    <img src="portada.jpg" alt="Portada de DJC ONLINE" class="cover-image">
-    <header>
+    <div class="container-fluid p-0">
+        <img src="portada.jpg" alt="Portada DJC ONLINE - Tienda de Productos Desechables" class="cover-image img-fluid w-100">
+    </div>
+    
+    <header class="text-center">
         <h1><strong>DJC ONLINE</strong></h1>
         <p>Tienda de Productos Desechables</p>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark cy-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">DJC ONLINE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="productos.html">Productos</a>
+                        <a class="nav-link" href="productos.html" aria-label="Ver productos">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
+                        <a class="nav-link" href="#contacto" aria-label="Ir a contacto">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#subscribe">Suscribirse</a>
+                        <a class="nav-link" href="#subscribe" aria-label="Suscribirse al boletín">Suscribirse</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
     <div class="container mt-5">
-        <div class="search-bar">
-            <input type="text" class="form-control" placeholder="Buscar productos...">
-            <div class="/">
-                    <button class="btn btn-secundary" type="button">Buscar</button>
-        </div>
-        <section id="productos">
-            <h2 class="text-center">Nuestros Productos</h2>
-            <div class="row">
-                <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="test_images\vaso-domo-12oz.jpg" class="card-img-top" alt="Producto 1">
-                <div class="card-body">
-                    <h5 class="card-title">Vaso de 12oz</h5>
-                    <p class="card-text">Transparante con orificio precortado para absorbente</p>
-                    <a href="#productos.html" class="btn btn-primary">Ver más</a>
-                </div>
+        <!-- Barra de búsqueda mejorada -->
+        <div class="input-group search-bar mb-4">
+            <input type="text" class="form-control" placeholder="Buscar productos..." aria-label="Buscar productos">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="button">Buscar</button>
             </div>
         </div>
 
+        <section id="productos">
+            <h2 class="text-center">Nuestros Productos</h2>
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="test_images/producto-1.jpg" class="card-img-top" alt="Envase circular transparente de 500ml y 1000ml con tapa">
+                        <div class="card-body">
+                            <h5 class="card-title">Envase de 500ml y 1000ml</h5>
+                            <p class="card-text">Circular Transparente con tapa</p>
+                            <a href="productos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="test_images/producto-2.jpg" class="card-img-top" alt="Envase circular de 330ml transparente con tapa">
+                        <div class="card-body">
+                            <h5 class="card-title">Envase circular de 370ml</h5>
+                            <p class="card-text">Transparente con tapa</p>
+                            <a href="productos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="test_images/producto-3.jpg" class="card-img-top" alt="Envase circular transparente de 250ml con tapa">
+                        <div class="card-body">
+                            <h5 class="card-title">Envase Circular de 240ml</h5>
+                            <p class="card-text">Transparente con tapa</p>
+                            <a href="productos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Productos adicionales (ejemplo de 20 productos en total) -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="test_images/producto-4.jpg" class="card-img-top" alt="envase de 6oz">
+                        <div class="card-body">
+                            <h5 class="card-title">Envase Circular de 180ml</h5>
+                            <p class="card-text">Transparente con tapa</p>
+                            <a href="productos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="test_images/producto-5.jpg" class="card-img-top" alt="envase deli de 1000ml">
+                        <div class="card-body">
+                            <h5 class="card-title">Envase Rectangular de 1000ml</h5>
+                            <p class="card-text">Transparente con tapa</p>
+                            <a href="productos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="test_images/producto-8.jpg" class="card-img-top" alt="envase deli de 500ml">
+                        <div class="card-body">
+                            <h5 class="card-title">Envase Rectangular de 500ml</h5>
+                            <p class="card-text">Transparente con tapa</p>
+                            <a href="productos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="test_images/producto-6.jpg" class="card-img-top" alt="envase deli de 240ml">
+                        <div class="card-body">
+                            <h5 class="card-title">Envase Rectangular de 240ml</h5>
+                            <p class="card-text">Transparente con tapa</p>
+                            <a href="productos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="test_images/producto-7.jpg" class="card-img-top" alt="plato p22">
+                        <div class="card-body">
+                            <h5 class="card-title">Plato de 22cm</h5>
+                            <p class="card-text">Plato FOAM, blanco</p>
+                            <a href="productos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+    
+
             </div>
         </section>
-        <section id="contacto">
+        
+        <section id="contacto" class="my-5">
             <h2 class="text-center">Contáctanos</h2>
-            <!-- Agrega tu formulario de contacto aquí -->
-        </section>
-        <section id="subscribe">
+             <a href="#link de whatsapp" class="btn-3"type="button">RESERVA YA</a>
+         </div>
+     </section>
+     <section id="subscribe" class="my-5">
             <h2 class="text-center">Suscríbete a nuestro boletín</h2>
             <p class="text-center">Recibe las últimas noticias y ofertas.</p>
             <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Tu correo electrónico" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="email" class="form-control" placeholder="Tu correo electrónico" aria-label="Correo electrónico" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="button">Suscribirse</button>
                 </div>
             </div>
         </section>
     </div>
-    <footer class="bg-primary text-white text-center py-3">
+
+    <footer class=" text-white text-center py-3">
         <p>&copy; 2023 DJC ONLINE. Todos los derechos reservados.</p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

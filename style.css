@@ -1,144 +1,81 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #d6f9fa;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
+/* Estilo para la barra de navegación */
 .navbar {
-    background-color: #0056b3;
+    background-color: #378;
+}
+.navbar-brand, .nav-link {
+    color: #beige;
+}
+.nav-link:hover {
+    color: #blue !important;
+}
+.text-center {
+    color: #337788;
 }
 
-.navbar-nav .nav-link {
-    color: white;
-}
-
+/* Estilo para la barra de búsqueda */
 .search-bar {
-    margin: 20px auto;
-    max-width: 600px;
-}
-.btn-secundary {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 20px, 0;
-}
-
-.product img {
-    max-width: 40%;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.product img:hover {
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.social-icons a {
-    color: white;
-    margin: 0 10px;
-}
-
-#subscribe {
-    background-color: #e9ecef;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin: 20px 0;
-}
-
-#subscribe input[type="email"] {
-    width: 70%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 5px;
 }
-
-#subscribe button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+.search-bar .btn-secondary {
+    background-color: #337788;
+    color: #fff;
 }
 
-#subscribe button:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para la página de productos */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño de las columnas */
-    gap: 10px;
-    padding: 10px;
-}
-
-.grid-item {
-    width: 100%; /* Ajusta el ancho de los productos */
-    height: auto;
-}
-
-.cover-image {
-    width: auto; /* Se ajusta a la pantalla */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 30px; /* Opcional: agrega esquinas redondeadas */
-    display: block;
-    margin: auto;
-}
-
-/* Estilos para las tarjetas de productos */
+/* Tarjetas de productos */
 .card {
     border: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
-
 .card-img-top {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 200px auto;
+    object-fit: fill;
 }
-
-.card-body {
-    padding: 15px;
+.card-img-top:hover {
+    margin-bottom: 20px;
 }
-
 .card-title {
+    font-size: 1.2em;
     font-weight: bold;
 }
-
-.card-text {
-    font-size: 14px;
-}
-
-/* Estilos para el botón "Ver más" */
 .btn-primary {
-    background-color: #007bff;
+    background-color: #337788;
     border: none;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #e68a00;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+/* Formulario de suscripción */
+#subscribe {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
 }
+#subscribe .btn-primary {
+    background-color: #337788;
+    color: #fff;
+}
+#subscribe .btn-primary:hover {
+    background-color: #000001;
+}
+.text-white {
+    background-color: #337788;
+}
+h1 {
+    color: white;
+    text-shadow: 
+    0 0 10px #333333;
+}
+.btn-3 {
+    background-color: #337788;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: min(75, 20);
+}
+    

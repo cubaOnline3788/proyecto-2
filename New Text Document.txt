@@ -1,0 +1,181 @@
+Tu código está bien estructurado y sigue buenas prácticas HTML. A continuación, te muestro algunas recomendaciones para mejorar el código en cuanto a legibilidad, accesibilidad y algunos ajustes de estilo.
+
+### 1. Corrección de clases y ortografía
+Hay una clase incorrecta para el botón de búsqueda y un pequeño error de ortografía en el texto del producto.
+
+- Cambia `btn-secundary` por `btn-secondary`, que es la clase correcta de Bootstrap.
+- Cambia `Transparante` por `Transparente` en la descripción del producto.
+
+### 2. Añadir texto alternativo accesible para imágenes
+Es recomendable que el texto alternativo de las imágenes sea más descriptivo para mejorar la accesibilidad.
+
+```html
+<img src="portada.jpg" alt="Imagen de portada de DJC ONLINE - Tienda de Productos Desechables" class="cover-image">
+```
+
+### 3. Mejora en el código de búsqueda
+Para el área de búsqueda, puedes mejorar la estructura HTML del botón y el campo de entrada usando una `input-group` de Bootstrap. Esto alineará el botón y el campo de entrada automáticamente.
+
+```html
+<div class="input-group search-bar">
+    <input type="text" class="form-control" placeholder="Buscar productos...">
+    <div class="input-group-append">
+        <button class="btn btn-secondary" type="button">Buscar</button>
+    </div>
+</div>
+```
+
+### 4. Ajustes en las URLs de imágenes y enlaces
+Asegúrate de usar `/` en las rutas de las URLs para mejorar la compatibilidad entre navegadores.
+
+```html
+<img src="test_images/vaso-domo-12oz.jpg" class="card-img-top" alt="Vaso de 12oz">
+```
+
+### 5. Mejoras en accesibilidad para botones y enlaces
+Para mejorar la accesibilidad, agrega `aria-label` en los botones y enlaces que no tienen un texto visible claramente descriptivo.
+
+```html
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+    <span class="navbar-toggler-icon"></span>
+</button>
+```
+
+### 6. Espaciado en el pie de página
+Agrega un poco de espacio en el pie de página para que no se vea tan pegado al contenido principal.
+
+```css
+footer {
+    margin-top: 20px;
+}
+```
+
+### 7. Mejora en el archivo CSS externo
+Algunos estilos pueden incluirse en tu archivo `style.css` para mejorar la organización y el mantenimiento.
+
+**Ejemplo**:
+```css
+.cover-image {
+    width: 100%;
+    height: auto;
+}
+
+.search-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+```
+
+### 8. Comprimir los archivos externos para rendimiento
+Si es posible, usa las versiones minificadas de los archivos externos (Bootstrap y jQuery) para mejorar el rendimiento. En general, los enlaces que tienes ya son versiones de producción, pero verifica siempre que el entorno de producción incluya versiones minificadas.
+
+### 9. Optimización de recursos en `head`
+Coloca las etiquetas de scripts que no sean críticas para la carga al final del `body` o utiliza el atributo `defer` en el `head`.
+
+```html
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+```
+
+### Código Final Mejorado:
+
+Aquí está el código completo con todas las sugerencias implementadas:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJC ONLINE - Tienda de Productos Desechables</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Imagen de portada -->
+    <img src="portada.jpg" alt="Imagen de portada de DJC ONLINE - Tienda de Productos Desechables" class="cover-image">
+    
+    <header>
+        <h1><strong>DJC ONLINE</strong></h1>
+        <p>Tienda de Productos Desechables</p>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">DJC ONLINE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#subscribe">Suscribirse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <!-- Barra de búsqueda mejorada -->
+        <div class="input-group search-bar">
+            <input type="text" class="form-control" placeholder="Buscar productos...">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="button">Buscar</button>
+            </div>
+        </div>
+
+        <section id="productos">
+            <h2 class="text-center">Nuestros Productos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="test_images/vaso-domo-12oz.jpg" class="card-img-top" alt="Vaso de 12oz">
+                        <div class="card-body">
+                            <h5 class="card-title">Vaso de 12oz</h5>
+                            <p class="card-text">Transparente con orificio precortado para absorbente</p>
+                            <a href="productos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto">
+            <h2 class="text-center">Contáctanos</h2>
+            <!-- Formulario de contacto aquí -->
+        </section>
+        
+        <section id="subscribe">
+            <h2 class="text-center">Suscríbete a nuestro boletín</h2>
+            <p class="text-center">Recibe las últimas noticias y ofertas.</p>
+            <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Tu correo electrónico" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">Suscribirse</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-primary text-white text-center py-3" style="margin-top: 20px;">
+        <p>&copy; 2023 DJC ONLINE. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
+```
+
+Estas mejoras deben ayudarte a mantener el código más claro y accesible.
