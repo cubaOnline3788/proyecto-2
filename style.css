@@ -74,8 +74,9 @@ h1 {
     border: none;
     color: #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-size: min(75, 20);
+    margin-left: 290px;
+    margin-right: 290px;
+    border-radius: 5px;
 }
     
